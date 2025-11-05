@@ -1,30 +1,30 @@
-
-import React, { useState } from "react";
+   import React, { useState } from "react";
 import "./../styles/App.css";
 
 const App = () => {
+  // initialize with one field set
   const [fields, setFields] = useState([{ name: "", age: "" }]);
 
-  // Add new field
+  // handle adding new fields
   const handleAddField = () => {
     setFields([...fields, { name: "", age: "" }]);
   };
 
-  // Remove field by index
+  // handle removing a specific field
   const handleRemoveField = (index) => {
     const updatedFields = fields.filter((_, i) => i !== index);
     setFields(updatedFields);
   };
 
-  // Handle input change
-  const handleInputChange = (index, event) => {
-    const { name, value } = event.target;
+  // handle input change for name/age
+  const handleInputChange = (index, e) => {
+    const { name, value } = e.target;
     const updatedFields = [...fields];
     updatedFields[index][name] = value;
     setFields(updatedFields);
   };
 
-  // Form submission
+  // handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(fields);
@@ -55,7 +55,6 @@ const App = () => {
             </button>
           </div>
         ))}
-
         <button type="button" onClick={handleAddField}>
           Add More
         </button>
