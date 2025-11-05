@@ -1,1 +1,26 @@
+/* Do not remove these styles if using the hide/show pattern later */
+
+#main {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  margin-right: 8px;
+  padding: 6px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 5px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
